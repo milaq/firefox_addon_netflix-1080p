@@ -34,12 +34,5 @@
 
   "options_ui": {
     "page": "options.html"
-  },
-
-  "applications": {
-    "gecko": {
-      "id": "netflix-1080p-firefox@vladikoff"
-    }
   }
-
 }

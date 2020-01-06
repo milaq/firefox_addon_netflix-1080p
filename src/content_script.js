@@ -7,7 +7,7 @@ urls = [
 ]
 
 
-// very messy workaround for accessing chrome storage outside of background / content scripts
+// very messy workaround for accessing storage outside of background / content scripts
 browser.storage.sync.get(['use6Channels'], function(items) {
     var use6Channels = items.use6Channels;
     var mainScript = document.createElement('script');
@@ -17,7 +17,7 @@ browser.storage.sync.get(['use6Channels'], function(items) {
 });
 
 for (var i = 0; i < urls.length; i++) {
-    var mainScriptUrl = chrome.extension.getURL(urls[i]);
+    var mainScriptUrl = browser.extension.getURL(urls[i]);
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', mainScriptUrl, true);
